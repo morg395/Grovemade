@@ -1,0 +1,592 @@
+@import '/css/reset.css';
+@import '/css/flexbox.css';
+@import '/css/animations.css';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: max(12px, min(85px, calc(100vw * 5.5 / 75)));
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+h2 {
+    font-size: max(10px, min(45px, calc(100vw * 5 / 75)));
+    font-weight: 400;
+}
+
+h3 {
+    font-size: max(6px, min(16px, calc(100vw * 2.5 / 90)));
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+#main__content {
+    flex: 1 0 auto;
+}
+
+.container {
+    width: 90vw;
+    max-width: 2440px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.header {
+    height: 75px;
+    background-color: #fff;
+}
+
+.header__wrapper {
+    height: 75px;
+}
+
+.header__logo {
+    padding: 0px 50px 0px 50px;
+}
+
+.nav__list {
+    gap: 30px
+}
+
+.nav__link {
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.hamburger {
+    position: relative;
+    display: none!important;
+    z-index: 1001;
+    background-color: transparent;
+    gap: 8px
+}
+
+.hamburger__item {
+    position: relative;
+    width: 35px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 100px;
+}
+
+.hamburger__menu {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none!important;
+    background-color: rgba(255, 255, 255, 0.98);
+    z-index: 1000;
+}
+
+.intro {
+    width: 100%;
+    height: 700px;
+    background-image: url('/images/main/intro/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.intro__wrapper {
+    height: 700px;
+}
+
+.intro__title, .intro__subtitle, .intro__link {
+    color: #fff;
+}
+
+.intro__title {
+    padding-bottom: max(5px, min(10px, calc(100vw * 1.5/ 90)));
+}
+
+.intro__subtitle {
+    padding-bottom: max(5px, min(40px, calc(100vw * 5 / 90)));
+}
+
+.link {
+    font-size: max(6px, min(16px, calc(100vw * 2.5 / 90)));
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 0.14em;
+}
+
+.link--white {
+    color: #fff!important;
+}
+
+.workspace {
+    width: 100%;
+    padding-top: 80px;
+}
+
+.workspace__wrapper {
+    width: 100%;
+}
+
+.workspace__content {
+    width: 100%;
+}
+
+.workspace__title {
+    padding-bottom: max(5px, min(20px, calc(100vw * 1.5/ 90)));
+}
+
+.workspace__subtitle {
+    color: #A0A0A0;
+    padding-bottom: max(5px, min(30px, calc(100vw * 5/ 90)));
+}
+
+.workspace__link {
+    margin-bottom: max(5px, min(80px, calc(100vw * 5 / 90)));
+}
+
+.deskpads {
+    padding-right: 20px;
+}
+
+.deskpads__img, .laptopstands__img {
+    max-width: 1150px;
+    width: 42vw;
+    padding-bottom: max(5px, min(50px, calc(100vw * 5.5 / 90)));
+}
+
+.deskpads__title, .laptopstands__title {
+    font-size: 28px;
+    font-size: max(12px, min(28px, calc(100vw * 2.5 / 90)));
+    font-weight: 400;
+    color: #000;
+    padding-bottom: max(5px, min(20px, calc(100vw * 1.5/ 90)));
+}
+
+.deskpads__link, .laptopstands__link {
+    font-size: max(6px, min(16px, calc(100vw * 2 / 90)));
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+}
+
+.products {
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+.products__title {
+    padding-bottom: max(5px, min(10px, calc(100vw * 6 / 90)));
+}
+
+.products__subtitle {
+    padding-bottom: max(5px, min(50px, calc(100vw * 5.5 / 90)));
+}
+
+.dots {
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.dots__item {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+}
+
+.carousel {
+    width: 100%;
+}
+
+/* .product .img__wrapper {
+    max-width: 560px;
+    max-height: 804px;
+    width: 20vw;
+    height: 55vh;
+    overflow: hidden;
+} */
+
+.carousel__item {
+    margin-right: 10px;
+}
+
+.product__img, .product, .product__price, .product__title {
+    max-width: 560px;
+    width: 20vw;
+}
+
+.product__img {
+    position: relative;
+    padding-bottom: max(5px, min(20px, calc(100vw * 1.5/ 90)));
+}
+
+.product__title {
+    padding-bottom: 5px;
+}
+
+.product__title, .product__price {
+    font-size: max(6px, min(16px, calc(100vw * 2.5 / 90)));
+    font-weight: 400;
+    color: #A0A0A0;
+}
+
+.insert {
+    height: 500px;
+    background-image: url('/images/main/insert/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.insert__wrapper {
+    height: 500px;
+}
+
+.insert__subtitle {
+    color: #fff;
+    padding-bottom: max(5px, min(40px, calc(100vw * 5 / 90)));
+}
+
+.story {
+    padding-top: 100px;
+}
+
+.story__title {
+    padding-bottom: max(5px, min(20px, calc(100vw * 1.5/ 90)));
+}
+
+.story__subtitle {
+    width: 45vw;
+    max-width: 1173px;
+    color: #A0A0A0;
+    padding-bottom: max(5px, min(40px, calc(100vw * 4 / 90)));
+}
+
+.story__img {
+    max-width: 1440px;
+    width: 60vw;
+}
+
+.team {
+    padding-top: 100px;
+}
+
+.team__title {
+    padding-bottom: max(5px, min(20px, calc(100vw * 1.5/ 90)));
+}
+
+.team__subtitle {
+    max-width: 1050px;
+    width: 45vw;
+    color: #A0A0A0;
+    padding-bottom: max(5px, min(80px, calc(100vw * 5 / 90)));
+}
+
+.team__content {
+    gap: max(5px, min(30px, calc(100vw * 3 / 90)));
+}
+
+.team__item {
+    max-width: 350px;
+    width: 13vw;
+}
+
+.end {
+    padding-top: 100px;
+}
+
+.end__title {
+    padding-bottom: max(5px, min(40px, calc(100vw * 4 / 90)));
+}
+
+.end__subtitle {
+    margin-bottom: max(5px, min(80px, calc(100vw * 5 / 90)));
+}
+
+.card {
+    width: 100%;
+    height: 400px;
+    background-color: #9AA8B1;
+}
+
+.card__logo {
+    padding-bottom: max(5px, min(20px, calc(100vw * 1.5/ 90)));
+}
+
+.card__title {
+    font-size: max(20px, min(40px, calc(100vw * 5 / 90)));;
+    font-weight: 400;
+    color: #fff;
+    padding-bottom: max(5px, min(20px, calc(100vw * 1.5/ 90)));
+}
+
+.card__subtitle {
+    font-size: max(6px, min(16px, calc(100vw * 2 / 90)));
+    font-weight: 400;
+    color: #fff;
+}
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.footer__wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.footer__up {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    background-color: #000;
+}
+
+.footer__center {
+    padding-top: 100px;
+}
+
+.footer__list {
+    padding-right: 80px;
+    gap: 10px;
+}
+
+.footer__link {
+    font-size: max(12px, min(24px, calc(100vw * 3 / 90)));
+    color: #000;
+}
+
+.newsletter__title {
+    font-size: max(12px, min(24px, calc(100vw * 3 / 90)));
+    color: #000;
+    padding-bottom: max(5px, min(20px, calc(100vw * 1.5/ 90)));
+}
+
+.newsletter__subtitle {
+    width: 24vw;
+    font-size: max(6px, min(16px, calc(100vw * 2 / 90)));
+    color: #A0A0A0;
+    padding-bottom: max(5px, min(80px, calc(100vw * 5 / 90)));
+}
+
+.newsletter__input {
+    max-width: 500px;
+    width: 30vw;
+    font-size: max(8px, min(18px, calc(100vw * 2.5 / 90)));
+    padding: 0px 10px 20px 10px;
+    padding-right: max(3px, min(10px, calc(100vw * 2.5 / 90)));
+    padding-bottom: max(10px, min(20px, calc(100vw * 2.5 / 90)));
+    padding-left: max(3px, min(10px, calc(100vw * 2.5 / 90)));
+    border-bottom: 2px solid #000;
+}
+
+:focus::-webkit-input-placeholder {
+    opacity: 0.4;
+}
+  
+:focus::-moz-placeholder {
+    opacity: 0.4;
+}
+  
+:focus:-moz-placeholder {
+    opacity: 0.4;
+}
+  
+:focus:-ms-input-placeholder {
+    opacity: 0.4;
+}
+
+.footer__copyright {
+    font-size: max(6px, min(16px, calc(100vw * 2 / 90)));
+    color: #707A7F;
+}
+
+.footer__link--options {
+    font-size: max(6px, min(16px, calc(100vw * 2 / 90)));
+    color: #707A7F;
+}
+
+.footer__link--active {
+    color: #000;
+}
+
+.footer__bottom {
+    padding-top: 80px;
+    
+}
+
+.footer__bottom, .margin__wrapper, .footer__links {
+    gap: 30px;
+}
+
+@media screen and (max-width: 991px) {
+    ul.nav__list {
+        display: none!important;
+    }
+
+    .header__logo {
+        margin-right: auto;
+    }
+
+    .header__logo {
+        padding: 0px 50px 0px 0px;
+    }
+
+    .hamburger {
+        display: flex!important;
+    }
+
+    .hamburger--active .hamburger__item1 {
+        transform: translate(0px, 13px) rotate(45deg);
+    }
+
+    .hamburger--active .hamburger__item2 {
+        transform: translate(-30px, 0px);
+        opacity: 0;
+    }
+
+    .hamburger--active .hamburger__item3 {
+        transform: translate(0px, -9px) rotate(-45deg);
+    }
+
+    .hamburger__menu--active {
+        display: flex!important;
+    }
+
+    .hamburger__list {
+        gap: 30px
+    }
+
+    .nav__link {
+        font-size: 36px;
+    }
+
+    .product__img, .product__price, .product__title {
+        max-width: 560px;
+        width: 26vw;
+    }
+
+    .story__subtitle, .team__subtitle {
+        width: 70vw;
+    }
+    
+    .team__item {
+        max-width: 350px;
+        width: 20vw;
+    }
+
+    .newsletter__subtitle {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 751px) {
+    .footer__up {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer__center {
+        padding-top: max(120px, min(150px, calc(100vw * 3.5 / 90)));
+    }
+
+    .margin__wrapper {
+        align-items: center;
+        gap: 50px;
+    }
+
+    .footer__bottom {
+        padding-top: max(50px, min(80px, calc(100vw * 3.5 / 90)));
+    }
+
+    .footer__links {
+        flex-direction: column;
+        gap: max(10px, min(30px, calc(100vw * 1.5 / 90)))
+    }
+}
+
+@media screen and (max-width: 681px) {
+    .nav__link {
+        font-size: 32px;
+    }
+
+    .workspace__content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .deskpads {
+        padding-right: 0px;
+    }
+
+    .deskpads__img, .laptopstands__img {
+        width: 80vw;
+    }
+    
+    .product__img, .product__price, .product__title {
+        max-width: 560px;
+        width: 38vw;
+    }
+
+    .footer__up {
+        width: 65px;
+        height: 65px;
+        font-size: 14px;
+    }
+
+    .footer__list {
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .footer__up {
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 449px) {
+    .product__img, .product__price, .product__title {
+        max-width: 560px;
+        width: 75vw;
+    }
+
+    .product__title, .product__price {
+        font-size: max(18px, min(28px, calc(100vw * 2 / 90)));
+    }
+}
+
+@media screen and (max-width: 439px) {
+    .footer__up {
+        width: 55px;
+        height: 55px;
+        font-size: 10px;
+    }
+}

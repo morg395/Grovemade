@@ -1,0 +1,15 @@
+* {
+    transition: .3s;
+}
+
+.nav__link:hover, .intro__link:hover,  .workspace__link:hover, .product__title:hover, .product__price:hover, .link:hover, .footer__link:hover {
+    color: #eb3535!important;
+}
+
+.nav__link:active, .intro__link:active, .deskpads__link:active, .laptopstands__link:active, .workspace__link:active, .product__title:active, .product__price:active, .link:active, .footer__link:active {
+    color: #961b1b!important;
+}
+
+/* .product__img:hover {
+    transform: scale(1.1);
+} */
