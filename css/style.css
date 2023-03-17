@@ -217,14 +217,6 @@ footer {
     width: 100%;
 }
 
-/* .product .img__wrapper {
-    max-width: 560px;
-    max-height: 804px;
-    width: 20vw;
-    height: 55vh;
-    overflow: hidden;
-} */
-
 .carousel__item {
     margin-right: 10px;
 }
@@ -251,7 +243,7 @@ footer {
 
 .insert {
     height: 500px;
-    background-image: url('/images/main/insert/background.jpg');
+    background-image: url('../images/main/insert/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
