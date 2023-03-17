@@ -1,6 +1,6 @@
-@import '/css/reset.css';
-@import '/css/flexbox.css';
-@import '/css/animations.css';
+@import 'css/reset.css';
+@import 'css/flexbox.css';
+@import 'css/animations.css';
 
 body {
     font-family: 'Roboto', sans-serif;
